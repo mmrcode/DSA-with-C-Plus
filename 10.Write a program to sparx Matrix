@@ -1,0 +1,48 @@
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a[3][3], sparse[9][3];
+    int k = 0;
+
+    cout << "Enter 3x3 matrix:" << endl;
+
+    // Input matrix
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            cin >> a[i][j];
+        }
+    }
+
+    // Convert to sparse matrix
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            if (a[i][j] != 0)
+            {
+                sparse[k][0] = i;
+                sparse[k][1] = j;
+                sparse[k][2] = a[i][j];
+                k++;
+            }
+        }
+    }
+
+    // Display sparse matrix
+    cout << "\nSparse Matrix:" << endl;
+    cout << "Row\tColumn\tValue" << endl;
+
+    for (int i = 0; i < k; i++)
+    {
+        cout << sparse[i][0] << "\t"
+             << sparse[i][1] << "\t"
+             << sparse[i][2] << endl;
+    }
+
+    return 0;
+}
