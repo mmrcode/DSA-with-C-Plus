@@ -1,0 +1,31 @@
+#include <iostream>
+#include <queue>
+#include <vector>
+using namespace std;
+int main()
+// Max Priority Queue
+priority_queue<int> maxPQ;
+maxPQ.push(30);
+maxPQ.push(10);
+maxPQ.push(50);
+maxPQ.push(20);
+maxPQ.push(40);
+cout << "Max Priority Queue: ";
+while OmaxPQ.empty())
+cout << maxPQ.top() "
+maxPQ.pop();
+cout << endl;
+// Min Priority Queue
+priority_queue<int, vector<int>, greater<int>> minPQ;
+minPQpush(30);
+minPQ.push(10);
+minPQpush(50);
+minPQpush(20);
+minPQ.push(40);
+cout << "Min Priority Queue: ";
+while OminPQ.empty())
+cout << minPQ.top() "
+minPQ.pop();
+cout << endl;
+return 0;
+}
